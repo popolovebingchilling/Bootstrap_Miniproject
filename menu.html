@@ -4,13 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Menu</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <title>Menu | Page</title>
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap/bootstrap-5.3.8-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="assets/css/menu.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playwrite+IE:wght@100..400&display=swap" rel="stylesheet">
+    <!-- FONT AWESOME FOR ICON -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <!-- GOOGLE FONTS -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playwrite+IE:wght@100..400&display=swap"
+        rel="stylesheet">
+    <!-- CUSTOM STYLE -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Feane | Our Menu</title>
 </head>
+
 <body>
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark px-0">
+                <a class="navbar-brand" href="index.html">Feane</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"
+                    aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="nav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="menu.html">MENU</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+                        <li class="nav-item"><a class="nav-link" href="reservation.html">RESERVATION</a></li>
+                    </ul>
+                </div>
+                <div class="user_option d-flex align-items-center">
+                    <a href="login.html" class="user_link"><i class="fa fa-user"></i></a>
+                    <a href="cart.html" class="cart_link mx-4"><i class="fa fa-shopping-cart"></i></a>
+                    <a href="search.html" class="search_link"><i class="fa fa-search"></i></a>
+                    <a href="menu.html" class="btn btn-order ms-4">Order Online</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
     <main>
         <section class="course-tab py-5">
             <div class="container">
@@ -53,7 +88,7 @@
 
                             <div class="col-lg-4 col-md-6">
                                 <a class="menu-card" href="#detail1">
-                                    <div class="menu-img">
+                                    <div class="menu-img burger-img">
                                         <img src="https://themewagon.github.io/feane/images/f2.png" alt="Burger">
                                     </div>
                                     <div class="menu-content">
@@ -69,7 +104,7 @@
 
                             <div class="col-lg-4 col-md-6">
                                 <a class="menu-card" href="#detail2">
-                                    <div class="menu-img">
+                                    <div class="menu-img burger-img">
                                         <img src="https://themewagon.github.io/feane/images/f7.png" alt="Burger">
                                     </div>
                                     <div class="menu-content">
@@ -85,7 +120,7 @@
 
                             <div class="col-lg-4 col-md-6">
                                 <a class="menu-card" href="#detail3">
-                                    <div class="menu-img">
+                                    <div class="menu-img burger-img">
                                         <img src="https://www.burgerking-cambodia.com/uploads/category/1720683480.png"
                                             alt="Burger">
                                     </div>
@@ -103,7 +138,7 @@
 
                             <div class="col-lg-4 col-md-6">
                                 <a class="menu-card" href="#detail4">
-                                    <div class="menu-img">
+                                    <div class="menu-img burger-img">
                                         <img src="https://www.burgerking-cambodia.com/uploads/category/1720683837.png"
                                             alt="Burger">
                                     </div>
@@ -121,7 +156,7 @@
 
                             <div class="col-lg-4 col-md-6">
                                 <a class="menu-card" href="#detail5">
-                                    <div class="menu-img">
+                                    <div class="menu-img burger-img">
                                         <img src="https://www.burgerking-cambodia.com/uploads/category/1720750654.png"
                                             alt="Burger">
                                     </div>
@@ -139,7 +174,7 @@
 
                             <div class="col-lg-4 col-md-6">
                                 <a class="menu-card" href="#detail6">
-                                    <div class="menu-img">
+                                    <div class="menu-img burger-img">
                                         <img src="https://www.burgerking-cambodia.com/uploads/category/1720750679.png"
                                             alt="Burger">
                                     </div>
@@ -166,7 +201,7 @@
 
                             <div class="col-lg-4 col-md-6">
                                 <a class="menu-card" href="#detail7">
-                                    <div class="menu-image">
+                                    <div class="menu-img">
                                         <img src="https://img.sndimg.com/food/image/upload/q_92,fl_progressive,w_1200,c_scale/v1/img/submissions/recipe/2001215136/SVs7T2FbTrmMpWri62fU_Margarita%20pizza.jpg"
                                             alt="Margherita Pizza">
                                     </div>
@@ -184,7 +219,7 @@
 
                             <div class="col-lg-4 col-md-6">
                                 <a class="menu-card" href="#detail8">
-                                    <div class="menu-image">
+                                    <div class="menu-img">
                                         <img src="https://www.unileverfoodsolutions.co.id/dam/global-ufs/mcos/SEA/calcmenu/recipes/ID-recipes/sacks/Margherita-Pizza/Pizza%20Margaretha%20(Recipe%20Page).jpg"
                                             alt="Pizza">
                                     </div>
@@ -201,7 +236,7 @@
 
                             <div class="col-lg-4 col-md-6">
                                 <a class="menu-card" href="#detail9">
-                                    <div class="menu-image">
+                                    <div class="menu-img">
                                         <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/ba/f5/c6/the-best-pizza-we-ever.jpg?w=1200&h=1200&s=1"
                                             alt="Express Pizza">
                                     </div>
@@ -218,13 +253,14 @@
 
                             <div class="col-lg-4 col-md-6">
                                 <a class="menu-card" href="#detail10">
-                                    <div class="menu-image">
+                                    <div class="menu-img">
                                         <img src="https://images.presentationgo.com/2025/04/pepperoni-pizza-closeup.jpg"
                                             alt="Express Pizza">
                                     </div>
                                     <div class="menu-content">
                                         <h4>Classic Pepperoni Pizza</h4>
-                                        <p>A traditional pizza made with tomato sauce, melted mozzarella cheese, and sliced pepperoni, baked on a perfectly crisp crust.</p>
+                                        <p>A traditional pizza made with tomato sauce, melted mozzarella cheese, and
+                                            sliced pepperoni, baked on a perfectly crisp crust.</p>
                                         <div class="price-cart">
                                             <h5>$22</h5>
                                             <div class="cart-btn"><i class="bi bi-cart"></i></div>
@@ -234,13 +270,14 @@
                             </div>
                             <div class="col-lg-4 col-md-6">
                                 <a class="menu-card" href="#detail11">
-                                    <div class="menu-image">
+                                    <div class="menu-img">
                                         <img src="https://b.zmtcdn.com/data/collections/c7d46261b33b5d464ec536c1706a72ec_1754474360.png?fit=around|562.5:360&crop=562.5:360;*,*"
                                             alt="Fancy Pizza">
                                     </div>
                                     <div class="menu-content">
                                         <h4>Fancy Pizza</h4>
-                                        <p>usually means a premium or gourmet-style pizza made with high-quality ingredients and creative toppings — more elegant than a regular pizza.</p>
+                                        <p>usually means a premium or gourmet-style pizza made with high-quality
+                                            ingredients and creative toppings — more elegant than a regular pizza.</p>
                                         <div class="price-cart">
                                             <h5>$12</h5>
                                             <div class="cart-btn"><i class="bi bi-cart"></i></div>
@@ -251,13 +288,14 @@
 
                             <div class="col-lg-4 col-md-6">
                                 <a class="menu-card" href="#detail12">
-                                    <div class="menu-image">
+                                    <div class="menu-img">
                                         <img src="https://www.spice-electronics.com/modules/ph_simpleblog/covers/21.jpg"
                                             alt="Pepperoni Pizza">
                                     </div>
                                     <div class="menu-content">
                                         <h4>Pepperoni Pizza</h4>
-                                        <p>It’s a pizza topped with pepperoni slices, mozzarella cheese, and tomato sauce, baked on a classic pizza crust.</p>
+                                        <p>It’s a pizza topped with pepperoni slices, mozzarella cheese, and tomato
+                                            sauce, baked on a classic pizza crust.</p>
                                         <div class="price-cart">
                                             <h5>$8</h5>
                                             <div class="cart-btn"><i class="bi bi-cart"></i></div>
@@ -277,7 +315,7 @@
 
                             <div class="col-lg-4 col-md-6">
                                 <a class="menu-card" href="#detail13">
-                                    <div class="menu-image">
+                                    <div class="menu-img">
                                         <img src="https://www.inspiredtaste.net/wp-content/uploads/2025/02/Pasta-Carbonara-Recipe-1.jpg"
                                             alt="Pasta">
                                     </div>
@@ -295,13 +333,13 @@
 
                             <div class="col-lg-4 col-md-6">
                                 <a class="menu-card" href="#detail14">
-                                    <div class="menu-image">
+                                    <div class="menu-img">
                                         <img src="https://www.spicebangla.com/wp-content/uploads/2024/08/Spicy-Pasta-recipe-optimised-scaled.webp"
                                             alt="Pasta">
                                     </div>
                                     <div class="menu-content">
                                         <h4>Spicy Pasta Recipe</h4>
-                                        <p>Life can be dull sometimes, but your meal doesn’t have to be. Turn your day
+                                        <p>Life can be dull sometimes, but your meal doesn't have to be. Turn your day
                                             around with my spicy pasta recipe —delicious flavor in every spoon!</p>
                                         <div class="price-cart">
                                             <h5>$14</h5>
@@ -313,7 +351,7 @@
 
                             <div class="col-lg-4 col-md-6">
                                 <a class="menu-card" href="#detail15">
-                                    <div class="menu-image">
+                                    <div class="menu-img">
                                         <img src="https://www.allrecipes.com/thmb/QiGptPjQB5mqSXGVxE4sLPMJs_4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/AR-269500-creamy-garlic-pasta-Beauties-2x1-bcd9cb83138849e4b17104a1cd51d063.jpg"
                                             alt="Pasta">
                                     </div>
@@ -337,7 +375,7 @@
 
                             <div class="col-lg-4 col-md-6">
                                 <a class="menu-card" href="#detail16">
-                                    <div class="menu-image">
+                                    <div class="menu-img">
                                         <img src="https://myincrediblerecipes.com/wp-content/uploads/2023/02/set-2-Lemonade-15-scaled.jpg"
                                             alt="Drink">
                                     </div>
@@ -354,7 +392,7 @@
 
                             <div class="col-lg-4 col-md-6">
                                 <a class="menu-card" href="#detail17">
-                                    <div class="menu-image">
+                                    <div class="menu-img">
                                         <img src="https://divascancook.com/wp-content/uploads/2024/01/best-mango-smoothie-recipe.jpg"
                                             alt="Drink">
                                     </div>
@@ -362,7 +400,7 @@
                                         <h4>Mango Smoothie</h4>
                                         <p>Thick and creamy mango smoothie blended with yogurt and honey.</p>
                                         <div class="price-cart">
-                                            <h5>$6</h5>
+                                            <h5>$14</h5>
                                             <div class="cart-btn"><i class="bi bi-cart"></i></div>
                                         </div>
                                     </div>
@@ -371,7 +409,7 @@
 
                             <div class="col-lg-4 col-md-6">
                                 <a class="menu-card" href="#detail18">
-                                    <div class="menu-image">
+                                    <div class="menu-img">
                                         <img src="https://foodisafourletterword.com/wp-content/uploads/2021/10/Easy_Organic_Vietnamese_Coffee_Recipe.jpg"
                                             alt="Drink">
                                     </div>
@@ -379,7 +417,7 @@
                                         <h4>Iced Coffee</h4>
                                         <p>Cold brew coffee over ice, served with your choice of milk.</p>
                                         <div class="price-cart">
-                                            <h5>$4</h5>
+                                            <h5>$10</h5>
                                             <div class="cart-btn"><i class="bi bi-cart"></i></div>
                                         </div>
                                     </div>
@@ -388,7 +426,7 @@
 
                             <div class="col-lg-4 col-md-6">
                                 <a class="menu-card" href="#detail19">
-                                    <div class="menu-image">
+                                    <div class="menu-img">
                                         <img src="https://www.thehungrybites.com/wp-content/uploads/2023/06/Strawberry-milkshake-frappuccino-featured.jpg"
                                             alt="Drink">
                                     </div>
@@ -396,7 +434,41 @@
                                         <h4>Strawberry Shake</h4>
                                         <p>Rich creamy milkshake made with fresh strawberries and ice cream.</p>
                                         <div class="price-cart">
-                                            <h5>$7</h5>
+                                            <h5>$12</h5>
+                                            <div class="cart-btn"><i class="bi bi-cart"></i></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6">
+                                <a class="menu-card" href="#detail20">
+                                    <div class="menu-img">
+                                        <img src="https://westernreservedistillers.com/wp-content/uploads/2023/11/Southern-Living-Mojito_009-65dc860743344068b5e5cab5efc85ebd.jpg"
+                                            alt="Drink">
+                                    </div>
+                                    <div class="menu-content">
+                                        <h4>Classic Mojito</h4>
+                                        <p>Refreshing blend of white rum, sugar, lime juice, soda water, and mint.</p>
+                                        <div class="price-cart">
+                                            <h5>$30</h5>
+                                            <div class="cart-btn"><i class="bi bi-cart"></i></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6">
+                                <a class="menu-card" href="#detail21">
+                                    <div class="menu-img">
+                                        <img src="https://images.ctfassets.net/ppnrkck61s7x/3SUqHUX8IYanRifstHI10A/2db52b5454b88de1f76fad7abae37001/Sunset_Margarita_primaryImage.png"
+                                            alt="Drink">
+                                    </div>
+                                    <div class="menu-content">
+                                        <h4>Sunset Margarita</h4>
+                                        <p>Elegant cocktail made with tequila, orange liqueur, and fresh lime juice.</p>
+                                        <div class="price-cart">
+                                            <h5>$25</h5>
                                             <div class="cart-btn"><i class="bi bi-cart"></i></div>
                                         </div>
                                     </div>
@@ -453,7 +525,14 @@
                         </div>
                         <div class="detail-bottom">
                             <div class="detail-price">$20.00 <small>per item</small></div>
-                            <a href="cart.html" class="btn-cart-link"><i class="bi bi-cart2"></i> Add to Cart</a>
+                            <div class="detail-actions">
+                                <div class="qty-selector">
+                                    <button class="qty-btn" onclick="event.preventDefault(); changeQty(this, -1)">-</button>
+                                    <input type="text" class="qty-input" value="1" readonly>
+                                    <button class="qty-btn" onclick="event.preventDefault(); changeQty(this, 1)">+</button>
+                                </div>
+                                <a href="javascript:void(0)" class="btn-cart-link" onclick="addToCart(this)"><i class="bi bi-cart2"></i> Add to Cart</a>
+                            </div>
                         </div>
                         <div class="detail-label mt-4">Nutrition (per serving)</div>
                         <div class="nutrition-row">
@@ -512,7 +591,14 @@
                         </div>
                         <div class="detail-bottom">
                             <div class="detail-price">$20.00 <small>per item</small></div>
-                            <a href="cart.html" class="btn-cart-link"><i class="bi bi-cart2"></i> Add to Cart</a>
+                            <div class="detail-actions">
+                                <div class="qty-selector">
+                                    <button class="qty-btn" onclick="event.preventDefault(); changeQty(this, -1)">-</button>
+                                    <input type="text" class="qty-input" value="1" readonly>
+                                    <button class="qty-btn" onclick="event.preventDefault(); changeQty(this, 1)">+</button>
+                                </div>
+                                <a href="javascript:void(0)" class="btn-cart-link" onclick="addToCart(this)"><i class="bi bi-cart2"></i> Add to Cart</a>
+                            </div>
                         </div>
                         <div class="detail-label mt-4">Nutrition (per serving)</div>
                         <div class="nutrition-row">
@@ -571,7 +657,14 @@
                         </div>
                         <div class="detail-bottom">
                             <div class="detail-price">$20.00 <small>per item</small></div>
-                            <a href="cart.html" class="btn-cart-link"><i class="bi bi-cart2"></i> Add to Cart</a>
+                            <div class="detail-actions">
+                                <div class="qty-selector">
+                                    <button class="qty-btn" onclick="event.preventDefault(); changeQty(this, -1)">-</button>
+                                    <input type="text" class="qty-input" value="1" readonly>
+                                    <button class="qty-btn" onclick="event.preventDefault(); changeQty(this, 1)">+</button>
+                                </div>
+                                <a href="javascript:void(0)" class="btn-cart-link" onclick="addToCart(this)"><i class="bi bi-cart2"></i> Add to Cart</a>
+                            </div>
                         </div>
                         <div class="detail-label mt-4">Nutrition (per serving)</div>
                         <div class="nutrition-row">
@@ -630,7 +723,14 @@
                         </div>
                         <div class="detail-bottom">
                             <div class="detail-price">$20.00 <small>per item</small></div>
-                            <a href="cart.html" class="btn-cart-link"><i class="bi bi-cart2"></i> Add to Cart</a>
+                            <div class="detail-actions">
+                                <div class="qty-selector">
+                                    <button class="qty-btn" onclick="event.preventDefault(); changeQty(this, -1)">-</button>
+                                    <input type="text" class="qty-input" value="1" readonly>
+                                    <button class="qty-btn" onclick="event.preventDefault(); changeQty(this, 1)">+</button>
+                                </div>
+                                <a href="javascript:void(0)" class="btn-cart-link" onclick="addToCart(this)"><i class="bi bi-cart2"></i> Add to Cart</a>
+                            </div>
                         </div>
                         <div class="detail-label mt-4">Nutrition (per serving)</div>
                         <div class="nutrition-row">
@@ -689,7 +789,14 @@
                         </div>
                         <div class="detail-bottom">
                             <div class="detail-price">$20.00 <small>per item</small></div>
-                            <a href="cart.html" class="btn-cart-link"><i class="bi bi-cart2"></i> Add to Cart</a>
+                            <div class="detail-actions">
+                                <div class="qty-selector">
+                                    <button class="qty-btn" onclick="event.preventDefault(); changeQty(this, -1)">-</button>
+                                    <input type="text" class="qty-input" value="1" readonly>
+                                    <button class="qty-btn" onclick="event.preventDefault(); changeQty(this, 1)">+</button>
+                                </div>
+                                <a href="javascript:void(0)" class="btn-cart-link" onclick="addToCart(this)"><i class="bi bi-cart2"></i> Add to Cart</a>
+                            </div>
                         </div>
                         <div class="detail-label mt-4">Nutrition (per serving)</div>
                         <div class="nutrition-row">
@@ -748,7 +855,14 @@
                         </div>
                         <div class="detail-bottom">
                             <div class="detail-price">$20.00 <small>per item</small></div>
-                            <a href="cart.html" class="btn-cart-link"><i class="bi bi-cart2"></i> Add to Cart</a>
+                            <div class="detail-actions">
+                                <div class="qty-selector">
+                                    <button class="qty-btn" onclick="event.preventDefault(); changeQty(this, -1)">-</button>
+                                    <input type="text" class="qty-input" value="1" readonly>
+                                    <button class="qty-btn" onclick="event.preventDefault(); changeQty(this, 1)">+</button>
+                                </div>
+                                <a href="javascript:void(0)" class="btn-cart-link" onclick="addToCart(this)"><i class="bi bi-cart2"></i> Add to Cart</a>
+                            </div>
                         </div>
                         <div class="detail-label mt-4">Nutrition (per serving)</div>
                         <div class="nutrition-row">
@@ -769,7 +883,8 @@
                 <a href="#" class="overlay-bg"></a>
                 <div class="detail-modal">
                     <a href="#" class="modal-close"><i class="bi bi-x-lg"></i></a>
-                    <img class="detail-img" src="https://img.sndimg.com/food/image/upload/q_92,fl_progressive,w_1200,c_scale/v1/img/submissions/recipe/2001215136/SVs7T2FbTrmMpWri62fU_Margarita%20pizza.jpg"
+                    <img class="detail-img"
+                        src="https://img.sndimg.com/food/image/upload/q_92,fl_progressive,w_1200,c_scale/v1/img/submissions/recipe/2001215136/SVs7T2FbTrmMpWri62fU_Margarita%20pizza.jpg"
                         alt="Classic Burger" />
                     <div class="detail-body">
                         <div class="detail-cat">Pizza</div>
@@ -780,7 +895,8 @@
                             <i class="bi bi-star-half"></i>
                             <span class="val">4.8</span><span class="rev">(124 reviews)</span>
                         </div>
-                        <p class="detail-desc">A classic Italian pizza made with tomato sauce, fresh mozzarella cheese, and basil leaves, representing the colors of the Italian flag 🇮🇹.</p>
+                        <p class="detail-desc">A classic Italian pizza made with tomato sauce, fresh mozzarella cheese,
+                            and basil leaves, representing the colors of the Italian flag 🇮🇹.</p>
                         <div class="detail-tags">
                             <span class="dtag">Beef</span><span class="dtag">Cheese</span>
                             <span class="dtag">Grilled</span><span class="dtag">Best Seller</span>
@@ -807,7 +923,14 @@
                         </div>
                         <div class="detail-bottom">
                             <div class="detail-price">$20.00 <small>per item</small></div>
-                            <a href="cart.html" class="btn-cart-link"><i class="bi bi-cart2"></i> Add to Cart</a>
+                            <div class="detail-actions">
+                                <div class="qty-selector">
+                                    <button class="qty-btn" onclick="event.preventDefault(); changeQty(this, -1)">-</button>
+                                    <input type="text" class="qty-input" value="1" readonly>
+                                    <button class="qty-btn" onclick="event.preventDefault(); changeQty(this, 1)">+</button>
+                                </div>
+                                <a href="javascript:void(0)" class="btn-cart-link" onclick="addToCart(this)"><i class="bi bi-cart2"></i> Add to Cart</a>
+                            </div>
                         </div>
                         <div class="detail-label mt-4">Nutrition (per serving)</div>
                         <div class="nutrition-row">
@@ -826,7 +949,8 @@
                 <a href="#" class="overlay-bg"></a>
                 <div class="detail-modal">
                     <a href="#" class="modal-close"><i class="bi bi-x-lg"></i></a>
-                    <img class="detail-img" src="https://www.unileverfoodsolutions.co.id/dam/global-ufs/mcos/SEA/calcmenu/recipes/ID-recipes/sacks/Margherita-Pizza/Pizza%20Margaretha%20(Recipe%20Page).jpg"
+                    <img class="detail-img"
+                        src="https://www.unileverfoodsolutions.co.id/dam/global-ufs/mcos/SEA/calcmenu/recipes/ID-recipes/sacks/Margherita-Pizza/Pizza%20Margaretha%20(Recipe%20Page).jpg"
                         alt="Classic Burger" />
                     <div class="detail-body">
                         <div class="detail-cat">Pizza</div>
@@ -837,7 +961,8 @@
                             <i class="bi bi-star-half"></i>
                             <span class="val">4.8</span><span class="rev">(124 reviews)</span>
                         </div>
-                        <p class="detail-desc">A classic Italian pizza made with tomato sauce, fresh mozzarella cheese, and basil leaves, representing the colors of the Italian flag 🇮🇹.</p>
+                        <p class="detail-desc">A classic Italian pizza made with tomato sauce, fresh mozzarella cheese,
+                            and basil leaves, representing the colors of the Italian flag 🇮🇹.</p>
                         <div class="detail-tags">
                             <span class="dtag">Beef</span><span class="dtag">Cheese</span>
                             <span class="dtag">Grilled</span><span class="dtag">Best Seller</span>
@@ -864,7 +989,14 @@
                         </div>
                         <div class="detail-bottom">
                             <div class="detail-price">$20.00 <small>per item</small></div>
-                            <a href="cart.html" class="btn-cart-link"><i class="bi bi-cart2"></i> Add to Cart</a>
+                            <div class="detail-actions">
+                                <div class="qty-selector">
+                                    <button class="qty-btn" onclick="event.preventDefault(); changeQty(this, -1)">-</button>
+                                    <input type="text" class="qty-input" value="1" readonly>
+                                    <button class="qty-btn" onclick="event.preventDefault(); changeQty(this, 1)">+</button>
+                                </div>
+                                <a href="javascript:void(0)" class="btn-cart-link" onclick="addToCart(this)"><i class="bi bi-cart2"></i> Add to Cart</a>
+                            </div>
                         </div>
                         <div class="detail-label mt-4">Nutrition (per serving)</div>
                         <div class="nutrition-row">
@@ -883,7 +1015,8 @@
                 <a href="#" class="overlay-bg"></a>
                 <div class="detail-modal">
                     <a href="#" class="modal-close"><i class="bi bi-x-lg"></i></a>
-                    <img class="detail-img" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/ba/f5/c6/the-best-pizza-we-ever.jpg?w=1200&h=1200&s=1"
+                    <img class="detail-img"
+                        src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/ba/f5/c6/the-best-pizza-we-ever.jpg?w=1200&h=1200&s=1"
                         alt="Classic Burger" />
                     <div class="detail-body">
                         <div class="detail-cat">Pizza</div>
@@ -894,7 +1027,8 @@
                             <i class="bi bi-star-half"></i>
                             <span class="val">4.8</span><span class="rev">(124 reviews)</span>
                         </div>
-                        <p class="detail-desc">A classic Italian pizza made with tomato sauce, fresh mozzarella cheese, and basil leaves, representing the colors of the Italian flag 🇮🇹.</p>
+                        <p class="detail-desc">A classic Italian pizza made with tomato sauce, fresh mozzarella cheese,
+                            and basil leaves, representing the colors of the Italian flag 🇮🇹.</p>
                         <div class="detail-tags">
                             <span class="dtag">Beef</span><span class="dtag">Cheese</span>
                             <span class="dtag">Grilled</span><span class="dtag">Best Seller</span>
@@ -921,7 +1055,14 @@
                         </div>
                         <div class="detail-bottom">
                             <div class="detail-price">$20.00 <small>per item</small></div>
-                            <a href="cart.html" class="btn-cart-link"><i class="bi bi-cart2"></i> Add to Cart</a>
+                            <div class="detail-actions">
+                                <div class="qty-selector">
+                                    <button class="qty-btn" onclick="event.preventDefault(); changeQty(this, -1)">-</button>
+                                    <input type="text" class="qty-input" value="1" readonly>
+                                    <button class="qty-btn" onclick="event.preventDefault(); changeQty(this, 1)">+</button>
+                                </div>
+                                <a href="javascript:void(0)" class="btn-cart-link" onclick="addToCart(this)"><i class="bi bi-cart2"></i> Add to Cart</a>
+                            </div>
                         </div>
                         <div class="detail-label mt-4">Nutrition (per serving)</div>
                         <div class="nutrition-row">
@@ -951,7 +1092,8 @@
                             <i class="bi bi-star-half"></i>
                             <span class="val">4.8</span><span class="rev">(124 reviews)</span>
                         </div>
-                        <p class="detail-desc">A classic Italian pizza made with tomato sauce, fresh mozzarella cheese, and basil leaves, representing the colors of the Italian flag 🇮🇹.</p>
+                        <p class="detail-desc">A classic Italian pizza made with tomato sauce, fresh mozzarella cheese,
+                            and basil leaves, representing the colors of the Italian flag 🇮🇹.</p>
                         <div class="detail-tags">
                             <span class="dtag">Beef</span><span class="dtag">Cheese</span>
                             <span class="dtag">Grilled</span><span class="dtag">Best Seller</span>
@@ -978,7 +1120,14 @@
                         </div>
                         <div class="detail-bottom">
                             <div class="detail-price">$20.00 <small>per item</small></div>
-                            <a href="cart.html" class="btn-cart-link"><i class="bi bi-cart2"></i> Add to Cart</a>
+                            <div class="detail-actions">
+                                <div class="qty-selector">
+                                    <button class="qty-btn" onclick="event.preventDefault(); changeQty(this, -1)">-</button>
+                                    <input type="text" class="qty-input" value="1" readonly>
+                                    <button class="qty-btn" onclick="event.preventDefault(); changeQty(this, 1)">+</button>
+                                </div>
+                                <a href="javascript:void(0)" class="btn-cart-link" onclick="addToCart(this)"><i class="bi bi-cart2"></i> Add to Cart</a>
+                            </div>
                         </div>
                         <div class="detail-label mt-4">Nutrition (per serving)</div>
                         <div class="nutrition-row">
@@ -997,7 +1146,8 @@
                 <a href="#" class="overlay-bg"></a>
                 <div class="detail-modal">
                     <a href="#" class="modal-close"><i class="bi bi-x-lg"></i></a>
-                    <img class="detail-img" src="https://b.zmtcdn.com/data/collections/c7d46261b33b5d464ec536c1706a72ec_1754474360.png?fit=around|562.5:360&crop=562.5:360;*,*"
+                    <img class="detail-img"
+                        src="https://b.zmtcdn.com/data/collections/c7d46261b33b5d464ec536c1706a72ec_1754474360.png?fit=around|562.5:360&crop=562.5:360;*,*"
                         alt="Classic Burger" />
                     <div class="detail-body">
                         <div class="detail-cat">Pizza</div>
@@ -1008,7 +1158,8 @@
                             <i class="bi bi-star-half"></i>
                             <span class="val">4.8</span><span class="rev">(124 reviews)</span>
                         </div>
-                        <p class="detail-desc">A classic Italian pizza made with tomato sauce, fresh mozzarella cheese, and basil leaves, representing the colors of the Italian flag 🇮🇹.</p>
+                        <p class="detail-desc">A classic Italian pizza made with tomato sauce, fresh mozzarella cheese,
+                            and basil leaves, representing the colors of the Italian flag 🇮🇹.</p>
                         <div class="detail-tags">
                             <span class="dtag">Beef</span><span class="dtag">Cheese</span>
                             <span class="dtag">Grilled</span><span class="dtag">Best Seller</span>
@@ -1035,7 +1186,14 @@
                         </div>
                         <div class="detail-bottom">
                             <div class="detail-price">$20.00 <small>per item</small></div>
-                            <a href="cart.html" class="btn-cart-link"><i class="bi bi-cart2"></i> Add to Cart</a>
+                            <div class="detail-actions">
+                                <div class="qty-selector">
+                                    <button class="qty-btn" onclick="event.preventDefault(); changeQty(this, -1)">-</button>
+                                    <input type="text" class="qty-input" value="1" readonly>
+                                    <button class="qty-btn" onclick="event.preventDefault(); changeQty(this, 1)">+</button>
+                                </div>
+                                <a href="javascript:void(0)" class="btn-cart-link" onclick="addToCart(this)"><i class="bi bi-cart2"></i> Add to Cart</a>
+                            </div>
                         </div>
                         <div class="detail-label mt-4">Nutrition (per serving)</div>
                         <div class="nutrition-row">
@@ -1065,7 +1223,8 @@
                             <i class="bi bi-star-half"></i>
                             <span class="val">4.8</span><span class="rev">(124 reviews)</span>
                         </div>
-                        <p class="detail-desc">A classic Italian pizza made with tomato sauce, fresh mozzarella cheese, and basil leaves, representing the colors of the Italian flag 🇮🇹.</p>
+                        <p class="detail-desc">A classic Italian pizza made with tomato sauce, fresh mozzarella cheese,
+                            and basil leaves, representing the colors of the Italian flag 🇮🇹.</p>
                         <div class="detail-tags">
                             <span class="dtag">Beef</span><span class="dtag">Cheese</span>
                             <span class="dtag">Grilled</span><span class="dtag">Best Seller</span>
@@ -1092,7 +1251,14 @@
                         </div>
                         <div class="detail-bottom">
                             <div class="detail-price">$20.00 <small>per item</small></div>
-                            <a href="cart.html" class="btn-cart-link"><i class="bi bi-cart2"></i> Add to Cart</a>
+                            <div class="detail-actions">
+                                <div class="qty-selector">
+                                    <button class="qty-btn" onclick="event.preventDefault(); changeQty(this, -1)">-</button>
+                                    <input type="text" class="qty-input" value="1" readonly>
+                                    <button class="qty-btn" onclick="event.preventDefault(); changeQty(this, 1)">+</button>
+                                </div>
+                                <a href="javascript:void(0)" class="btn-cart-link" onclick="addToCart(this)"><i class="bi bi-cart2"></i> Add to Cart</a>
+                            </div>
                         </div>
                         <div class="detail-label mt-4">Nutrition (per serving)</div>
                         <div class="nutrition-row">
@@ -1109,11 +1275,12 @@
             </div>
         </section>
         <section class="detailpasta">
-             <div class="detail-overlay" id="detail13">
+            <div class="detail-overlay" id="detail13">
                 <a href="#" class="overlay-bg"></a>
                 <div class="detail-modal">
                     <a href="#" class="modal-close"><i class="bi bi-x-lg"></i></a>
-                    <img class="detail-img" src="https://www.inspiredtaste.net/wp-content/uploads/2025/02/Pasta-Carbonara-Recipe-1.jpg"
+                    <img class="detail-img"
+                        src="https://www.inspiredtaste.net/wp-content/uploads/2025/02/Pasta-Carbonara-Recipe-1.jpg"
                         alt="Classic Burger" />
                     <div class="detail-body">
                         <div class="detail-cat">Pasta</div>
@@ -1124,7 +1291,8 @@
                             <i class="bi bi-star-half"></i>
                             <span class="val">4.8</span><span class="rev">(124 reviews)</span>
                         </div>
-                        <p class="detail-desc">A classic Italian pizza made with tomato sauce, fresh mozzarella cheese, and basil leaves, representing the colors of the Italian flag 🇮🇹.</p>
+                        <p class="detail-desc">A classic Italian pizza made with tomato sauce, fresh mozzarella cheese,
+                            and basil leaves, representing the colors of the Italian flag 🇮🇹.</p>
                         <div class="detail-tags">
                             <span class="dtag">Beef</span><span class="dtag">Cheese</span>
                             <span class="dtag">Grilled</span><span class="dtag">Best Seller</span>
@@ -1151,7 +1319,14 @@
                         </div>
                         <div class="detail-bottom">
                             <div class="detail-price">$20.00 <small>per item</small></div>
-                            <a href="cart.html" class="btn-cart-link"><i class="bi bi-cart2"></i> Add to Cart</a>
+                            <div class="detail-actions">
+                                <div class="qty-selector">
+                                    <button class="qty-btn" onclick="event.preventDefault(); changeQty(this, -1)">-</button>
+                                    <input type="text" class="qty-input" value="1" readonly>
+                                    <button class="qty-btn" onclick="event.preventDefault(); changeQty(this, 1)">+</button>
+                                </div>
+                                <a href="javascript:void(0)" class="btn-cart-link" onclick="addToCart(this)"><i class="bi bi-cart2"></i> Add to Cart</a>
+                            </div>
                         </div>
                         <div class="detail-label mt-4">Nutrition (per serving)</div>
                         <div class="nutrition-row">
@@ -1166,11 +1341,12 @@
                     </div>
                 </div>
             </div>
-             <div class="detail-overlay" id="detail14">
+            <div class="detail-overlay" id="detail14">
                 <a href="#" class="overlay-bg"></a>
                 <div class="detail-modal">
                     <a href="#" class="modal-close"><i class="bi bi-x-lg"></i></a>
-                    <img class="detail-img" src="https://www.spicebangla.com/wp-content/uploads/2024/08/Spicy-Pasta-recipe-optimised-scaled.webp"
+                    <img class="detail-img"
+                        src="https://www.spicebangla.com/wp-content/uploads/2024/08/Spicy-Pasta-recipe-optimised-scaled.webp"
                         alt="Classic Burger" />
                     <div class="detail-body">
                         <div class="detail-cat">Pasta</div>
@@ -1181,7 +1357,8 @@
                             <i class="bi bi-star-half"></i>
                             <span class="val">4.8</span><span class="rev">(124 reviews)</span>
                         </div>
-                        <p class="detail-desc">A classic Italian pizza made with tomato sauce, fresh mozzarella cheese, and basil leaves, representing the colors of the Italian flag 🇮🇹.</p>
+                        <p class="detail-desc">A classic Italian pizza made with tomato sauce, fresh mozzarella cheese,
+                            and basil leaves, representing the colors of the Italian flag 🇮🇹.</p>
                         <div class="detail-tags">
                             <span class="dtag">Beef</span><span class="dtag">Cheese</span>
                             <span class="dtag">Grilled</span><span class="dtag">Best Seller</span>
@@ -1208,7 +1385,14 @@
                         </div>
                         <div class="detail-bottom">
                             <div class="detail-price">$20.00 <small>per item</small></div>
-                            <a href="cart.html" class="btn-cart-link"><i class="bi bi-cart2"></i> Add to Cart</a>
+                            <div class="detail-actions">
+                                <div class="qty-selector">
+                                    <button class="qty-btn" onclick="event.preventDefault(); changeQty(this, -1)">-</button>
+                                    <input type="text" class="qty-input" value="1" readonly>
+                                    <button class="qty-btn" onclick="event.preventDefault(); changeQty(this, 1)">+</button>
+                                </div>
+                                <a href="javascript:void(0)" class="btn-cart-link" onclick="addToCart(this)"><i class="bi bi-cart2"></i> Add to Cart</a>
+                            </div>
                         </div>
                         <div class="detail-label mt-4">Nutrition (per serving)</div>
                         <div class="nutrition-row">
@@ -1223,11 +1407,12 @@
                     </div>
                 </div>
             </div>
-             <div class="detail-overlay" id="detail15">
+            <div class="detail-overlay" id="detail15">
                 <a href="#" class="overlay-bg"></a>
                 <div class="detail-modal">
                     <a href="#" class="modal-close"><i class="bi bi-x-lg"></i></a>
-                    <img class="detail-img" src="https://www.allrecipes.com/thmb/QiGptPjQB5mqSXGVxE4sLPMJs_4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/AR-269500-creamy-garlic-pasta-Beauties-2x1-bcd9cb83138849e4b17104a1cd51d063.jpg"
+                    <img class="detail-img"
+                        src="https://www.allrecipes.com/thmb/QiGptPjQB5mqSXGVxE4sLPMJs_4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/AR-269500-creamy-garlic-pasta-Beauties-2x1-bcd9cb83138849e4b17104a1cd51d063.jpg"
                         alt="Classic Burger" />
                     <div class="detail-body">
                         <div class="detail-cat">Pasta</div>
@@ -1238,7 +1423,8 @@
                             <i class="bi bi-star-half"></i>
                             <span class="val">4.8</span><span class="rev">(124 reviews)</span>
                         </div>
-                        <p class="detail-desc">A classic Italian pizza made with tomato sauce, fresh mozzarella cheese, and basil leaves, representing the colors of the Italian flag 🇮🇹.</p>
+                        <p class="detail-desc">A classic Italian pizza made with tomato sauce, fresh mozzarella cheese,
+                            and basil leaves, representing the colors of the Italian flag 🇮🇹.</p>
                         <div class="detail-tags">
                             <span class="dtag">Beef</span><span class="dtag">Cheese</span>
                             <span class="dtag">Grilled</span><span class="dtag">Best Seller</span>
@@ -1265,7 +1451,14 @@
                         </div>
                         <div class="detail-bottom">
                             <div class="detail-price">$20.00 <small>per item</small></div>
-                            <a href="cart.html" class="btn-cart-link"><i class="bi bi-cart2"></i> Add to Cart</a>
+                            <div class="detail-actions">
+                                <div class="qty-selector">
+                                    <button class="qty-btn" onclick="event.preventDefault(); changeQty(this, -1)">-</button>
+                                    <input type="text" class="qty-input" value="1" readonly>
+                                    <button class="qty-btn" onclick="event.preventDefault(); changeQty(this, 1)">+</button>
+                                </div>
+                                <a href="javascript:void(0)" class="btn-cart-link" onclick="addToCart(this)"><i class="bi bi-cart2"></i> Add to Cart</a>
+                            </div>
                         </div>
                         <div class="detail-label mt-4">Nutrition (per serving)</div>
                         <div class="nutrition-row">
@@ -1286,7 +1479,8 @@
                 <a href="#" class="overlay-bg"></a>
                 <div class="detail-modal">
                     <a href="#" class="modal-close"><i class="bi bi-x-lg"></i></a>
-                    <img class="detail-img" src="https://myincrediblerecipes.com/wp-content/uploads/2023/02/set-2-Lemonade-15-scaled.jpg"
+                    <img class="detail-img"
+                        src="https://myincrediblerecipes.com/wp-content/uploads/2023/02/set-2-Lemonade-15-scaled.jpg"
                         alt="Classic Burger" />
                     <div class="detail-body">
                         <div class="detail-cat">Drinks</div>
@@ -1297,7 +1491,8 @@
                             <i class="bi bi-star-half"></i>
                             <span class="val">4.8</span><span class="rev">(124 reviews)</span>
                         </div>
-                        <p class="detail-desc">A refreshing blend of fresh lemons, sugar, and water, perfect for a hot day.</p>
+                        <p class="detail-desc">A refreshing blend of fresh lemons, sugar, and water, perfect for a hot
+                            day.</p>
                         <div class="detail-tags">
                             <span class="dtag">Citrus</span><span class="dtag">Refreshment</span>
                             <span class="dtag">Low Sugar</span><span class="dtag">Best Seller</span>
@@ -1324,7 +1519,14 @@
                         </div>
                         <div class="detail-bottom">
                             <div class="detail-price">$5.00 <small>per item</small></div>
-                            <a href="cart.html" class="btn-cart-link"><i class="bi bi-cart2"></i> Add to Cart</a>
+                            <div class="detail-actions">
+                                <div class="qty-selector">
+                                    <button class="qty-btn" onclick="event.preventDefault(); changeQty(this, -1)">-</button>
+                                    <input type="text" class="qty-input" value="1" readonly>
+                                    <button class="qty-btn" onclick="event.preventDefault(); changeQty(this, 1)">+</button>
+                                </div>
+                                <a href="javascript:void(0)" class="btn-cart-link" onclick="addToCart(this)"><i class="bi bi-cart2"></i> Add to Cart</a>
+                            </div>
                         </div>
                         <div class="detail-label mt-4">Nutrition (per serving)</div>
                         <div class="nutrition-row">
@@ -1343,7 +1545,8 @@
                 <a href="#" class="overlay-bg"></a>
                 <div class="detail-modal">
                     <a href="#" class="modal-close"><i class="bi bi-x-lg"></i></a>
-                    <img class="detail-img" src="https://divascancook.com/wp-content/uploads/2024/01/best-mango-smoothie-recipe.jpg"
+                    <img class="detail-img"
+                        src="https://divascancook.com/wp-content/uploads/2024/01/best-mango-smoothie-recipe.jpg"
                         alt="Classic Burger" />
                     <div class="detail-body">
                         <div class="detail-cat">Drinks</div>
@@ -1354,7 +1557,8 @@
                             <i class="bi bi-star-half"></i>
                             <span class="val">4.8</span><span class="rev">(124 reviews)</span>
                         </div>
-                        <p class="detail-desc">A refreshing blend of fresh mangoes, sugar, and water, perfect for a hot day.</p>
+                        <p class="detail-desc">A refreshing blend of fresh mangoes, sugar, and water, perfect for a hot
+                            day.</p>
                         <div class="detail-tags">
                             <span class="dtag">Tropical</span><span class="dtag">Refreshment</span>
                             <span class="dtag">Low Sugar</span><span class="dtag">Best Seller</span>
@@ -1380,7 +1584,7 @@
                                 +$0.5</label>
                         </div>
                         <div class="detail-bottom">
-                            <div class="detail-price">$6.00 <small>per item</small></div>
+                            <div class="detail-price">$14.00 <small>per item</small></div>
                             <a href="cart.html" class="btn-cart-link"><i class="bi bi-cart2"></i> Add to Cart</a>
                         </div>
                         <div class="detail-label mt-4">Nutrition (per serving)</div>
@@ -1400,7 +1604,8 @@
                 <a href="#" class="overlay-bg"></a>
                 <div class="detail-modal">
                     <a href="#" class="modal-close"><i class="bi bi-x-lg"></i></a>
-                    <img class="detail-img" src="https://foodisafourletterword.com/wp-content/uploads/2021/10/Easy_Organic_Vietnamese_Coffee_Recipe.jpg"
+                    <img class="detail-img"
+                        src="https://foodisafourletterword.com/wp-content/uploads/2021/10/Easy_Organic_Vietnamese_Coffee_Recipe.jpg"
                         alt="Classic Burger" />
                     <div class="detail-body">
                         <div class="detail-cat">Drinks</div>
@@ -1437,8 +1642,15 @@
                                 +$0.5</label>
                         </div>
                         <div class="detail-bottom">
-                            <div class="detail-price">$4.00 <small>per item</small></div>
-                            <a href="cart.html" class="btn-cart-link"><i class="bi bi-cart2"></i> Add to Cart</a>
+                            <div class="detail-price">$10.00 <small>per item</small></div>
+                            <div class="detail-actions">
+                                <div class="qty-selector">
+                                    <button class="qty-btn" onclick="event.preventDefault(); changeQty(this, -1)">-</button>
+                                    <input type="text" class="qty-input" value="1" readonly>
+                                    <button class="qty-btn" onclick="event.preventDefault(); changeQty(this, 1)">+</button>
+                                </div>
+                                <a href="javascript:void(0)" class="btn-cart-link" onclick="addToCart(this)"><i class="bi bi-cart2"></i> Add to Cart</a>
+                            </div>
                         </div>
                         <div class="detail-label mt-4">Nutrition (per serving)</div>
                         <div class="nutrition-row">
@@ -1457,7 +1669,8 @@
                 <a href="#" class="overlay-bg"></a>
                 <div class="detail-modal">
                     <a href="#" class="modal-close"><i class="bi bi-x-lg"></i></a>
-                    <img class="detail-img" src="https://www.thehungrybites.com/wp-content/uploads/2023/06/Strawberry-milkshake-frappuccino-featured.jpg"
+                    <img class="detail-img"
+                        src="https://www.thehungrybites.com/wp-content/uploads/2023/06/Strawberry-milkshake-frappuccino-featured.jpg"
                         alt="Classic Burger" />
                     <div class="detail-body">
                         <div class="detail-cat">Drinks</div>
@@ -1494,8 +1707,15 @@
                                 +$0.5</label>
                         </div>
                         <div class="detail-bottom">
-                            <div class="detail-price">$7.00 <small>per item</small></div>
-                            <a href="cart.html" class="btn-cart-link"><i class="bi bi-cart2"></i> Add to Cart</a>
+                            <div class="detail-price">$12.00 <small>per item</small></div>
+                            <div class="detail-actions">
+                                <div class="qty-selector">
+                                    <button class="qty-btn" onclick="event.preventDefault(); changeQty(this, -1)">-</button>
+                                    <input type="text" class="qty-input" value="1" readonly>
+                                    <button class="qty-btn" onclick="event.preventDefault(); changeQty(this, 1)">+</button>
+                                </div>
+                                <a href="javascript:void(0)" class="btn-cart-link" onclick="addToCart(this)"><i class="bi bi-cart2"></i> Add to Cart</a>
+                            </div>
                         </div>
                         <div class="detail-label mt-4">Nutrition (per serving)</div>
                         <div class="nutrition-row">
@@ -1510,10 +1730,217 @@
                     </div>
                 </div>
             </div>
+
+            <div class="detail-overlay" id="detail20">
+                <a href="#" class="overlay-bg"></a>
+                <div class="detail-modal">
+                    <a href="#" class="modal-close"><i class="bi bi-x-lg"></i></a>
+                    <img class="detail-img" src="https://westernreservedistillers.com/wp-content/uploads/2023/11/Southern-Living-Mojito_009-65dc860743344068b5e5cab5efc85ebd.jpg"
+                        alt="Drink" />
+                    <div class="detail-body">
+                        <div class="detail-cat">Drinks</div>
+                        <h2 class="detail-name">Classic Mojito</h2>
+                        <div class="detail-rating">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <span class="val">5.0</span><span class="rev">(89 reviews)</span>
+                        </div>
+                        <p class="detail-desc">Refreshing blend of white rum, sugar, lime juice, soda water, and mint. A
+                            timeless classic.</p>
+                        <div class="detail-tags">
+                            <span class="dtag">Alcoholic</span><span class="dtag">Minty</span>
+                            <span class="dtag">Refreshing</span><span class="dtag">Summer</span>
+                        </div>
+                        <div class="detail-label">Choose Size</div>
+                        <div class="size-opts">
+                            <input type="radio" name="sz20" id="sz20a" checked /><label for="sz20a">Regular</label>
+                            <input type="radio" name="sz20" id="sz20b" /><label for="sz20b">Double</label>
+                        </div>
+                        <div class="detail-label">Add Extras</div>
+                        <div class="extras-grid">
+                            <input type="checkbox" id="ex20a" /><label for="ex20a"><i class="bi bi-plus-circle"></i>
+                                Extra Mint
+                                +$1</label>
+                            <input type="checkbox" id="ex20b" /><label for="ex20b"><i class="bi bi-plus-circle"></i>
+                                Lime Slice
+                                +$0.5</label>
+                        </div>
+                        <div class="detail-bottom">
+                            <div class="detail-price">$30.00 <small>per glass</small></div>
+                            <a href="javascript:void(0)" class="btn-cart-link" onclick="addToCart(this)"><i
+                                    class="bi bi-cart2"></i> Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="detail-overlay" id="detail21">
+                <a href="#" class="overlay-bg"></a>
+                <div class="detail-modal">
+                    <a href="#" class="modal-close"><i class="bi bi-x-lg"></i></a>
+                    <img class="detail-img" src="https://images.ctfassets.net/ppnrkck61s7x/3SUqHUX8IYanRifstHI10A/2db52b5454b88de1f76fad7abae37001/Sunset_Margarita_primaryImage.png"
+                        alt="Drink" />
+                    <div class="detail-body">
+                        <div class="detail-cat">Drinks</div>
+                        <h2 class="detail-name">Sunset Margarita</h2>
+                        <div class="detail-rating">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                            <span class="val">4.7</span><span class="rev">(112 reviews)</span>
+                        </div>
+                        <p class="detail-desc">Elegant cocktail made with premium tequila, orange liqueur, and fresh
+                            lime juice.</p>
+                        <div class="detail-tags">
+                            <span class="dtag">Alcoholic</span><span class="dtag">Citrus</span>
+                            <span class="dtag">Classy</span><span class="dtag">Strong</span>
+                        </div>
+                        <div class="detail-label">Choose Size</div>
+                        <div class="size-opts">
+                            <input type="radio" name="sz21" id="sz21a" checked /><label for="sz21a">Regular</label>
+                            <input type="radio" name="sz21" id="sz21b" /><label for="sz21b">Premium</label>
+                        </div>
+                        <div class="detail-label">Add Extras</div>
+                        <div class="extras-grid">
+                            <input type="checkbox" id="ex21a" /><label for="ex21a"><i class="bi bi-plus-circle"></i>
+                                Salt Rim
+                                +$0</label>
+                            <input type="checkbox" id="ex21b" /><label for="ex21b"><i class="bi bi-plus-circle"></i>
+                                Extra Lime
+                                +$0.5</label>
+                        </div>
+                        <div class="detail-bottom">
+                            <div class="detail-price">$25.00 <small>per glass</small></div>
+                            <a href="javascript:void(0)" class="btn-cart-link" onclick="addToCart(this)"><i
+                                    class="bi bi-cart2"></i> Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 footer-brand">
+                    <h2>Feane</h2>
+                    <p>A premium fast-food experience celebrating high-quality ingredients and the art of professional
+                        cooking, located in the heart of Phnom Penh.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 footer-col">
+                    <h5>NAVIGATE</h5>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="menu.html">MENU</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="reservation.html">RESERVE</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 footer-col">
+                    <h5>HOURS</h5>
+                    <p>Tue — Thu: 5:30 PM — 10:00 PM</p>
+                    <p>Fri — Sat: 5:00 PM — 11:00 PM</p>
+                    <p>Sun: 5:00 PM — 9:30 PM</p>
+                    <p>Monday: Closed</p>
+                </div>
+                <div class="col-lg-3 footer-col">
+                    <h5>FIND US</h5>
+                    <p>123 Your Heaart Street</p>
+                    <p>Phnom Penh, Cambodia</p>
+                    <p>+855 773 811</p>
+                    <p>hello@feaneeats.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Feane. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/css/bootstrap/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Tab switching from URL params
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const tabParam = urlParams.get('tab');
+            if (tabParam) {
+                const tabBtn = document.querySelector(`#nav-${tabParam}-tab`);
+                if (tabBtn) {
+                    // Triggers the Bootstrap tab click
+                    tabBtn.click();
+                    // Scroll to menu
+                    setTimeout(() => {
+                        document.querySelector('.course-tab').scrollIntoView({ behavior: 'smooth' });
+                    }, 500);
+                }
+            }
+        });
+
+        function addToCart(btn) {
+            const modal = btn.closest('.detail-modal');
+            const name = modal.querySelector('.detail-name').innerText;
+            const priceBase = parseFloat(modal.querySelector('.detail-price').innerText.replace('$', '').split(' ')[0]);
+            const image = modal.querySelector('.detail-img').src;
+
+            // Get selected size
+            const sizeLabel = modal.querySelector('.size-opts input:checked + label');
+            const size = sizeLabel ? sizeLabel.innerText : 'Regular';
+
+            // Get quantity
+            const qtyInput = modal.querySelector('.qty-input');
+            const quantity = qtyInput ? parseInt(qtyInput.value) : 1;
+
+            // Get selected extras
+            const extras = [];
+            let extrasTotal = 0;
+            modal.querySelectorAll('.extras-grid input:checked + label').forEach(label => {
+                let text = label.innerText.replace(/\+\$[\d\.]+/g, '').trim();
+                extras.push(text);
+                
+                // Opt: add to price if we want to be fancy
+                const match = label.innerText.match(/\+\$([\d\.]+)/);
+                if(match) extrasTotal += parseFloat(match[1]);
+            });
+
+            const finalPrice = (priceBase + extrasTotal) * quantity;
+
+            const cartItem = {
+                id: Date.now() + Math.random(),
+                name,
+                price: (priceBase + extrasTotal), // Store unit price for calculations
+                image,
+                size,
+                extras,
+                quantity: quantity
+            };
+
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push(cartItem);
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            // Success feedback
+            btn.innerHTML = '<i class="bi bi-check-lg"></i> Added to Cart!';
+            btn.style.background = "#28a745";
+            
+            setTimeout(() => {
+                window.location.href = 'cart.html';
+            }, 600);
+        }
+
+        function changeQty(btn, delta) {
+            const input = btn.parentElement.querySelector('.qty-input');
+            let val = parseInt(input.value) + delta;
+            if (val < 1) val = 1;
+            input.value = val;
+        }
+    </script>
 </body>
 
 </html>

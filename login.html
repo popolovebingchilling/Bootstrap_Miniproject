@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/x-icon" href="assets/image/image/favicon.png">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- FONT AWESOME FOR ICON -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playwrite+IE:wght@100..400&display=swap" rel="stylesheet">
+    <!-- CUSTOM STYLE -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Login | Page</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark px-0">
+                <a class="navbar-brand" href="index.html">Feane</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"
+                    aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="nav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+                        <li class="nav-item"><a class="nav-link" href="menu.html">MENU</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+                        <li class="nav-item"><a class="nav-link" href="reservation.html">RESERVATION</a></li>
+                    </ul>
+                </div>
+                <div class="user_option d-flex align-items-center">
+                    <a href="login.html" class="user_link active"><i class="fa fa-user" style="color: var(--gold);"></i></a>
+                    <a href="cart.html" class="cart_link mx-4"><i class="fa fa-shopping-cart"></i></a>
+                    <a href="search.html" class="search_link"><i class="fa fa-search"></i></a>
+                    <a href="menu.html" class="btn btn-order ms-4">Order Online</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="login-section">
+            <div class="container">
+                <div class="login-card" data-aos="zoom-in">
+                    <h2>Feane</h2>
+                    <p class="text-center">Welcome back! Please login to your account.</p>
+                    <form action="index.html">
+                        <div class="mb-3">
+                            <label class="reserve-label">EMAIL ADDRESS</label>
+                            <input type="email" class="login-input" placeholder="name@example.com" required>
+                        </div>
+                        <div class="mb-4 position-relative">
+                            <label class="reserve-label">PASSWORD</label>
+                            <input type="password" id="passwordField" class="login-input" placeholder="••••••••" required>
+                            <span class="position-absolute end-0 top-50 translate-middle-y me-3 cursor-pointer" onclick="togglePassword()" style="color: var(--gold); cursor: pointer;">
+                                <i class="fa fa-eye" id="toggleIcon"></i>
+                            </span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="remember">
+                                <label class="form-check-label text-muted small" for="remember">Remember me</label>
+                            </div>
+                            <a href="#" class="small text-decoration-none" style="color: var(--gold);">Forgot Password?</a>
+                        </div>
+                        <button type="submit" class="btn-confirm w-100 py-3">Login Now</button>
+                    </form>
+                    <script>
+                        function togglePassword() {
+                            const passwordField = document.getElementById('passwordField');
+                            const toggleIcon = document.getElementById('toggleIcon');
+                            if (passwordField.type === 'password') {
+                                passwordField.type = 'text';
+                                toggleIcon.classList.remove('fa-eye');
+                                toggleIcon.classList.add('fa-eye-slash');
+                            } else {
+                                passwordField.type = 'password';
+                                toggleIcon.classList.remove('fa-eye-slash');
+                                toggleIcon.classList.add('fa-eye');
+                            }
+                        }
+                    </script>
+                    <div class="text-center mt-4">
+                        <p class="small text-muted">Don't have an account? <a href="#" style="color: var(--gold);" class="text-decoration-none fw-bold">Create Account</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+      <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 footer-brand">
+                    <h2>Feane</h2>
+                    <p>A premium fast-food experience celebrating high-quality ingredients and the art of professional cooking, located in the heart of Phnom Penh.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 footer-col">
+                    <h5>NAVIGATE</h5>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="menu.html">MENU</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="reservation.html">RESERVE</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 footer-col">
+                    <h5>HOURS</h5>
+                    <p>Tue — Thu: 5:30 PM — 10:00 PM</p>
+                    <p>Fri — Sat: 5:00 PM — 11:00 PM</p>
+                    <p>Sun: 5:00 PM — 9:30 PM</p>
+                    <p>Monday: Closed</p>
+                </div>
+                <div class="col-lg-3 footer-col">
+                    <h5>FIND US</h5>
+                    <p>123 Your Heaart Street</p>
+                    <p>Phnom Penh, Cambodia</p>
+                    <p>+855 773 811</p>
+                    <p>hello@feaneeats.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Feane. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/css/bootstrap/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

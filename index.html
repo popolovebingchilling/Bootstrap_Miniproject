@@ -3,20 +3,475 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- HTML CSS -->
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <title>Home | Page</title>
     <!-- BOOTSTRAP CSS -->
-    <link rel="stylesheet" href="assets/css/bootstrap/bootstrap-5.3.8-dist/css/bootstrap.css">
-    <!-- BOOTSTRAP THEME  -->
-    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="assets/css/bootstrap/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <!-- FONT AWESOME FOR ICON -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playwrite+IE:wght@100..400&display=swap" rel="stylesheet">
+    <!-- CUSTOM STYLE -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- SWIPER CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <title>Feane | Home</title>
 </head>
 
 <body>
-</body>
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark px-0">
+                <a class="navbar-brand" href="index.html">Feane</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"
+                    aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="nav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link active" href="index.html">HOME</a></li>
+                        <li class="nav-item"><a class="nav-link" href="menu.html">MENU</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+                        <li class="nav-item"><a class="nav-link" href="reservation.html">RESERVATION</a></li>
+                    </ul>
+                </div>
+                <div class="user_option d-flex align-items-center">
+                    <a href="login.html" class="user_link"><i class="fa fa-user"></i></a>
+                    <a href="cart.html" class="cart_link mx-4"><i class="fa fa-shopping-cart"></i></a>
+                    <a href="search.html" class="search_link"><i class="fa fa-search"></i></a>
+                    <a href="menu.html" class="btn btn-order ms-4">Order Online</a>
+                </div>
+            </nav>
+        </div>
+    </header>
 
-<!-- BOOTSTRAP JAVA -->
-<script src="assets/css/bootstrap/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    <main>
+        <section class="hero-slider">
+            <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000" data-bs-pause="false">
+                <div class="carousel-indicators carousel-indicators-left">
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+                
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="hero-img-container">
+                            <img src="https://images.unsplash.com/photo-1473093226795-af9932fe5856?q=80&w=1994" alt="Burger">
+                        </div>
+                        <div class="hero-overlay"></div>
+                        <div class="container">
+                            <div class="hero-content" data-aos="fade-up">
+                                <h1>Fast Food Restaurant</h1>
+                                <p>Pasta, it is a simple and tasty dish, enjoyed, by many people in different places around the world. It can be cooked, served, and mixed with sauces.</p>
+                                <a href="menu.html" class="btn-hero">Order Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <div class="hero-img-container">
+                            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=2070" alt="Pizza">
+                        </div>
+                        <div class="hero-overlay"></div>
+                        <div class="container">
+                            <div class="hero-content">
+                                <h1>Tasty Italian Pizzas</h1>
+                                <p>Experience the authentic taste of Italy with our wood-fired pizzas, made with hand-picked ingredients and our secret family dough recipe.</p>
+                                <a href="menu.html" class="btn-hero">Explore Menu</a>
+                            </div>
+                        </div>
+                    </div>
+     
+                    <div class="carousel-item">
+                        <div class="hero-img-container">
+                            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=2070" alt="Pasta">
+                        </div>
+                        <div class="hero-overlay"></div>
+                        <div class="container">
+                            <div class="hero-content">
+                                <h1>Gourmet Pasta Experience</h1>
+                                <p>Delight in our artisanal pasta dishes, crafted with passion and served with the finest sauces that highlight the true essence of Mediterranean cuisine.</p>
+                                <a href="menu.html" class="btn-hero">Order Online</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="hero-img-container">
+                            <img src="https://images.ctfassets.net/ppnrkck61s7x/3SUqHUX8IYanRifstHI10A/2db52b5454b88de1f76fad7abae37001/Sunset_Margarita_primaryImage.png" alt="Drinks">
+                        </div>
+                        <div class="hero-overlay"></div>
+                        <div class="container">
+                            <div class="hero-content">
+                                <h1>Summer Drink Specials</h1>
+                                <p>Refresh your senses with our new collection of handcrafted cocktails and seasonal smoothies, the perfect companion to your gourmet meal.</p>
+                                <a href="menu.html" class="btn-hero">View Drinks</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="offer-section">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-md-6" data-aos="fade-right">
+                        <div class="offer-card">
+                            <div class="offer-img">
+                                <img src="https://themewagon.github.io/feane/images/o1.jpg" alt="Tasty Thursdays">
+                            </div>
+                            <div class="offer-details">
+                                <h5>Tasty Thursdays</h5>
+                                <h2>20% <span>Off</span></h2>
+                                <a href="menu.html" class="btn btn-hero py-2 px-4 shadow-none"><i class="bi bi-cart-fill me-2"></i>Order Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6" data-aos="fade-left">
+                        <div class="offer-card">
+                            <div class="offer-img">
+                                <img src="https://themewagon.github.io/feane/images/o2.jpg" alt="Pizza Days">
+                            </div>
+                            <div class="offer-details">
+                                <h5>Pizza Days</h5>
+                                <h2>15% <span>Off</span></h2>
+                                <a href="menu.html" class="btn btn-hero py-2 px-4 shadow-none"><i class="bi bi-cart-fill me-2"></i>Order Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="home-menu-section">
+            <div class="container">
+                <h2 class="home-menu-title">Our Menu</h2>
+                
+                <div class="d-flex justify-content-center gap-4 mb-5">
+                    <button class="btn btn-dark rounded-pill px-4">All</button>
+                    <button class="btn btn-outline-dark rounded-pill px-4">Burger</button>
+                    <button class="btn btn-outline-dark rounded-pill px-4">Pizza</button>
+                    <button class="btn btn-outline-dark rounded-pill px-4">Pasta</button>
+                    <button class="btn btn-outline-dark rounded-pill px-4">Drink</button>
+                </div>
+
+                <div class="row g-4 mt-4">
+                    <!-- ITEM 1 -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                        <div class="home-menu-card">
+                            <div class="home-menu-header">
+                                <img src="https://themewagon.github.io/feane/images/f1.png" alt="Delicious Pizza">
+                            </div>
+                            <div class="home-menu-body">
+                                <h4>Delicious Pizza</h4>
+                                <p>Freshly baked pizza with melted cheese, crispy crust, and rich toppings, offering a warm and satisfying bite every time.</p>
+                                <div class="home-menu-footer">
+                                    <span class="home-menu-price">$20</span>
+                                    <a href="menu.html" class="home-cart-btn"><i class="bi bi-cart-fill"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ITEM 2 -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="home-menu-card">
+                            <div class="home-menu-header burger-img">
+                                <img src="https://themewagon.github.io/feane/images/f2.png" alt="Delicious Burger">
+                            </div>
+                            <div class="home-menu-body">
+                                <h4>Delicious Burger</h4>
+                                <p>Juicy grilled burger layered with fresh lettuce, tomato, and cheese, delivering a flavorful and hearty meal to enjoy.</p>
+                                <div class="home-menu-footer">
+                                    <span class="home-menu-price">$15</span>
+                                    <a href="menu.html" class="home-cart-btn"><i class="bi bi-cart-fill"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ITEM 3 -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="home-menu-card">
+                            <div class="home-menu-header">
+                                <img src="https://themewagon.github.io/feane/images/f3.png" alt="Delicious Pizza">
+                            </div>
+                            <div class="home-menu-body">
+                                <h4>Delicious Pizza</h4>
+                                <p>Classic pizza topped with savory ingredients and golden cheese, bringing a perfect balance of taste and texture together.</p>
+                                <div class="home-menu-footer">
+                                    <span class="home-menu-price">$17</span>
+                                    <a href="menu.html" class="home-cart-btn"><i class="bi bi-cart-fill"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ITEM 4 -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                        <div class="home-menu-card">
+                            <div class="home-menu-header">
+                                <img src="https://themewagon.github.io/feane/images/f4.png" alt="Delicious Pasta">
+                            </div>
+                            <div class="home-menu-body">
+                                <h4>Delicious Pasta</h4>
+                                <p>Delicious pasta mixed with fresh vegetables and light seasoning, creating a simple yet tasty dish for any occasion.</p>
+                                <div class="home-menu-footer">
+                                    <span class="home-menu-price">$18</span>
+                                    <a href="menu.html" class="home-cart-btn"><i class="bi bi-cart-fill"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ITEM 5 -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="home-menu-card">
+                            <div class="home-menu-header">
+                                <img src="https://myincrediblerecipes.com/wp-content/uploads/2023/02/set-2-Lemonade-15-scaled.jpg" alt="Fresh Lemonade">
+                            </div>
+                            <div class="home-menu-body">
+                                <h4>Fresh Lemonade</h4>
+                                <p>Cool refreshing lemonade made with fresh lemons and a hint of mint, perfect for relaxing and enjoying a light drink..</p>
+                                <div class="home-menu-footer">
+                                    <span class="home-menu-price">$5</span>
+                                    <a href="menu.html" class="home-cart-btn"><i class="bi bi-cart-fill"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ITEM 6 -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="home-menu-card">
+                            <div class="home-menu-header">
+                                <img src="https://themewagon.github.io/feane/images/f6.png" alt="Delicious Pizza">
+                            </div>
+                            <div class="home-menu-body">
+                                <h4>Delicious Pizza</h4>
+                                <p>Hot and cheesy pizza served with a crispy base and rich flavors, making it a favorite choice for many food lovers.</p>
+                                <div class="home-menu-footer">
+                                    <span class="home-menu-price">$15</span>
+                                    <a href="menu.html" class="home-cart-btn"><i class="bi bi-cart-fill"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-5">
+                    <a href="menu.html" class="btn btn-hero rounded-pill px-5 py-3">View More</a>
+                </div>
+            </div>
+        </section>
+        <section class="home-about-section">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6" data-aos="zoom-in">
+                        <div class="home-about-img">
+                            <img src="https://themewagon.github.io/feane/images/about-img.png" alt="We Are Feane">
+                        </div>
+                    </div>
+                    <div class="col-lg-6" data-aos="fade-left">
+                        <div class="home-about-content">
+                            <h2>We Are Feane</h2>
+                            <p>There are many varieties of fast food restaurants available, offering a wide range of quick and tasty meals for people on the go, but most of them focus on speed, convenience, and consistent flavors that appeal to many customers. These places usually serve items like burgers, pizza, pasta, and refreshing drinks, prepared in a short time to satisfy hunger efficiently. If you are going to visit a fast food restaurant, you can expect simple menus, affordable prices, and a casual environment where you can enjoy your food comfortably with friends or family.</p>
+                            <a href="about.html" class="btn btn-hero rounded-pill">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="testimonial-section">
+            <div class="container">
+                <span class="testimonial-label" data-aos="fade-down">GUEST VOICES</span>
+                <h2 class="testimonial-title" data-aos="fade-up">What People Say</h2>
+                <div class="testimonial-line"></div>
+                
+                <div class="swiper-container testimonial-swiper mt-4">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" data-aos="fade-up" data-aos-delay="0">
+                            <div class="testimonial-card">
+                                <div class="stars">
+                                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                                </div>
+                                <p class="quote">"The juicy burger is honestly one of the best fast foods I've had anywhere.I would definitely come back again because it's just that memorable."</p>
+                                <span class="author">— JAMES T., NEW YORK</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" data-aos="fade-up" data-aos-delay="100">
+                            <div class="testimonial-card">
+                                <div class="stars">
+                                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                                </div>
+                                <p class="quote">"Every dish tells a story. The tasting menu took us through six courses of pure artistry. We will absolutely be back."</p>
+                                <span class="author">— SOPHIE & MARK R., LONDON</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" data-aos="fade-up" data-aos-delay="200">
+                            <div class="testimonial-card">
+                                <div class="stars">
+                                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                                </div>
+                                <p class="quote">"The ambience, the service, the food — everything was flawless. The smoked bone marrow starter is something special."</p>
+                                <span class="author">— ANIKA V., BERLIN</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="reservation-section" id="bookTable">
+            <div class="container">
+                <div class="row align-items-start g-5">
+                    <!-- LEFT COLUMN: INFO -->
+                    <div class="col-lg-5" data-aos="fade-right">
+                        <span class="reserve-label">JOIN US</span>
+                        <h1 class="reserve-title">Make a Reservation</h1>
+                        <hr style="width: 50px; border: 2px solid #d35400; opacity: 1 !important; margin-bottom: 30px !important;">
+                        <p class="mb-5 opacity-75">We welcome walk-ins, but a reservation ensures we're ready for you. For parties of 8 or more, please call us directly.</p>
+                        
+                        <div class="info-hours">
+                            <span class="reserve-label">HOURS</span>
+                            <p>Tue — Thu: 5:30 PM — 10:00 PM</p>
+                            <p>Fri — Sat: 5:00 PM — 11:00 PM</p>
+                            <p>Sun: 5:00 PM — 9:30 PM</p>
+                            <p class="opacity-50">Monday: Closed</p>
+                        </div>
+                        
+                        <div class="info-contact">
+                            <span class="reserve-label">CONTACT</span>
+                            <p class="h5 fw-normal text-white">+855 773 811</p>
+                            <p>hello@feaneeats.com</p>
+                            <p>123 Your Heart Street, Phnom Penh</p>
+                        </div>
+                    </div>
+                    
+                    <!-- RIGHT COLUMN: FORM -->
+                    <div class="col-lg-7" data-aos="fade-left">
+                        <form action="index.html" class="row g-4">
+                            <div class="col-md-6">
+                                <label class="reserve-label">FIRST NAME</label>
+                                <input type="text" class="reserve-input" placeholder="First Name">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="reserve-label">LAST NAME</label>
+                                <input type="text" class="reserve-input" placeholder="Last Name">
+                            </div>
+                            <div class="col-md-12">
+                                <label class="reserve-label">EMAIL</label>
+                                <input type="email" class="reserve-input" placeholder="example@email.com">
+                            </div>
+                            <div class="col-md-12">
+                                <label class="reserve-label">PHONE</label>
+                                <input type="text" class="reserve-input" placeholder="+(855) 000-0000">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="reserve-label">DATE</label>
+                                <input type="date" class="reserve-input">
+                            </div>
+                            <div class="col-md-3">
+                                <label class="reserve-label">TIME</label>
+                                <input type="text" class="reserve-input" placeholder="5:30 PM">
+                            </div>
+                            <div class="col-md-3">
+                                <label class="reserve-label">GUESTS</label>
+                                <input type="number" class="reserve-input" placeholder="2">
+                            </div>
+                            <div class="col-12">
+                                <label class="reserve-label">SPECIAL REQUESTS</label>
+                                <textarea class="reserve-input" rows="4" placeholder="Allergies, celebrations, seating preferences..."></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn-confirm">Confirm Reservation</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 footer-brand">
+                    <h2>Feane</h2>
+                    <p>A premium fast-food experience celebrating high-quality ingredients and the art of professional cooking, located in the heart of Phnom Penh.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 footer-col">
+                    <h5>NAVIGATE</h5>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="menu.html">MENU</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="reservation.html">RESERVE</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 footer-col">
+                    <h5>HOURS</h5>
+                    <p>Tue — Thu: 5:30 PM — 10:00 PM</p>
+                    <p>Fri — Sat: 5:00 PM — 11:00 PM</p>
+                    <p>Sun: 5:00 PM — 9:30 PM</p>
+                    <p>Monday: Closed</p>
+                </div>
+                <div class="col-lg-3 footer-col">
+                    <h5>FIND US</h5>
+                    <p>123 Your Heaart Street</p>
+                    <p>Phnom Penh, Cambodia</p>
+                    <p>+855 773 811</p>
+                    <p>hello@feaneeats.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Feane. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/css/bootstrap/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="assets/js/cart.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- SWIPER JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        AOS.init();
+
+        // Initialize Swiper for Menu
+        new Swiper('.menu-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                640: { slidesPerView: 1 },
+                768: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 },
+            }
+        });
+
+        // Initialize Swiper for Testimonials
+        new Swiper('.testimonial-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                768: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 },
+            }
+        });
+    </script>
 </html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assets/image/image/favicon.png">
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- FONT AWESOME FOR ICON -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <!-- GOOGLE FONTS -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playwrite+IE:wght@100..400&display=swap"
+        rel="stylesheet">
+    <!-- CUSTOM STYLE -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Cart | Page</title>
+    <style>
+        /* Keeping basic structure, all design moved to style.css */
+        .cart-container {
+            max-width: 800px;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+
+<body class="bg-black">
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark px-0">
+                <a class="navbar-brand" href="index.html">Feane</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"
+                    aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="nav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+                        <li class="nav-item"><a class="nav-link" href="menu.html">MENU</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+                        <li class="nav-item"><a class="nav-link" href="reservation.html">RESERVATION</a></li>
+                    </ul>
+                </div>
+                <div class="user_option d-flex align-items-center">
+                    <a href="login.html" class="user_link"><i class="fa fa-user"></i></a>
+                    <a href="cart.html" class="cart_link mx-4 active"><i class="fa fa-shopping-cart"
+                            style="color: var(--gold);"></i></a>
+                    <a href="search.html" class="search_link"><i class="fa fa-search"></i></a>
+                    <a href="menu.html" class="btn btn-order ms-4">Order Online</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="cart-section">
+        <div class="container">
+            <div class="cart-main-container" data-aos="fade-up">
+                <div class="text-center mb-5">
+                    <h2 class="cart-header-title">Your Order</h2>
+                    <p class="text-muted small">Elegant dining starts with your selection</p>
+                </div>
+
+                <div id="cart-items-list">
+                    <!-- Items will be injected here -->
+                </div>
+
+                <div id="total-area" style="display: none;">
+                    <div class="mt-4">
+                        <div class="summary-line">
+                            <span>Subtotal</span>
+                            <span id="subtotal-val">$0.00</span>
+                        </div>
+                        <div class="summary-line">
+                            <span>Service Charge (10%)</span>
+                            <span id="tax-val">$0.00</span>
+                        </div>
+                        <div class="summary-line">
+                            <span>Delivery Fee</span>
+                            <span id="delivery-val">$0.00</span>
+                        </div>
+                        <div class="summary-total d-flex justify-content-between align-items-center">
+                            <span>Grand Total</span>
+                            <span id="final-total">$0.00</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-5 d-flex gap-3">
+                        <a href="menu.html" class="btn btn-outline-light rounded-pill px-4 py-3 flex-grow-1">Add More</a>
+                        <button class="btn btn-confirm py-3 px-5 flex-grow-1" onclick="placeOrder()">Secure Checkout</button>
+                    </div>
+                </div>
+
+                <div id="empty-cart" class="text-center py-5" style="display: none;">
+                    <i class="bi bi-cart-x h1 text-muted mb-3 d-block"></i>
+                    <h5 class="text-white">Your cart is currently empty</h5>
+                    <p class="text-muted small mb-4">Discover the flavors of Feane and start your journey.</p>
+                    <a href="menu.html" class="btn btn-confirm px-5 mt-2">Go to Menu</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="mt-5">
+        <div class="container text-center text-muted py-5">
+            <p class="small mb-0">© 2026 Feane Restaurant. Experience Elegance.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        document.addEventListener('DOMContentLoaded', renderSimpleCart);
+
+        function renderSimpleCart() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const listContainer = document.getElementById('cart-items-list');
+            const totalArea = document.getElementById('total-area');
+            const emptyState = document.getElementById('empty-cart');
+            const totalEl = document.getElementById('final-total');
+
+            if (cart.length === 0) {
+                listContainer.innerHTML = '';
+                totalArea.style.display = 'none';
+                emptyState.style.display = 'block';
+                return;
+            }
+
+            emptyState.style.display = 'none';
+            totalArea.style.display = 'block';
+
+            let subtotal = 0;
+            let html = '';
+
+            cart.forEach(item => {
+                const itemTotal = item.price * (item.quantity || 1);
+                subtotal += itemTotal;
+
+                html += `
+                    <div class="cart-item-row" data-aos="fade-up">
+                        <img src="${item.image}" alt="${item.name}" class="cart-item-img">
+                        <div class="cart-item-info">
+                            <h4>${item.name}</h4>
+                            <p>${item.size}${item.extras.length ? ' • ' + item.extras.join(', ') : ''}</p>
+                            <div class="d-flex align-items-center mt-2">
+                                <button onclick="updateQty('${item.id}', -1)" class="cart-qty-btn">-</button>
+                                <span class="mx-3 text-white fw-bold">${item.quantity}</span>
+                                <button onclick="updateQty('${item.id}', 1)" class="cart-qty-btn">+</button>
+                            </div>
+                        </div>
+                        <div class="cart-item-price">$${itemTotal.toFixed(2)}</div>
+                        <button onclick="removeItem('${item.id}')" class="cart-remove-btn">
+                            <i class="bi bi-trash"></i>
+                        </button>
+                    </div>
+                `;
+            });
+
+            listContainer.innerHTML = html;
+
+            const tax = subtotal * 0.10;
+            const delivery = subtotal > 0 ? 2.50 : 0;
+            const total = subtotal + tax + delivery;
+
+            document.getElementById('subtotal-val').innerText = `$${subtotal.toFixed(2)}`;
+            document.getElementById('tax-val').innerText = `$${tax.toFixed(2)}`;
+            document.getElementById('delivery-val').innerText = `$${delivery.toFixed(2)}`;
+            totalEl.innerText = `$${total.toFixed(2)}`;
+        }
+
+        function updateQty(id, delta) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const item = cart.find(i => String(i.id) === String(id));
+            if (item) {
+                item.quantity = (item.quantity || 1) + delta;
+                if (item.quantity < 1) {
+                    removeItem(id);
+                    return;
+                }
+                localStorage.setItem('cart', JSON.stringify(cart));
+                renderSimpleCart();
+            }
+        }
+
+        function removeItem(id) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart = cart.filter(i => String(i.id) !== String(id));
+            localStorage.setItem('cart', JSON.stringify(cart));
+            renderSimpleCart();
+        }
+
+        function placeOrder() {
+            alert('Thank you for choosing Feane! Your order has been received.');
+            localStorage.removeItem('cart');
+            renderSimpleCart();
+        }
+    </script>
+</body>
+
+</html>
