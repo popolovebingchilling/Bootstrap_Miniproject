@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playwrite+IE:wght@100..400&display=swap');
 
+@import url('https://unpkg.com/aos@2.3.1/dist/aos.css');
+
 :root {
     --primary-color: #ffffff;
     --secondary-color: #d7d4d4;
@@ -8,6 +10,13 @@
     --gold-dk: #e0920e;
     --text-dark: #2c3e50;
     --bg-grey-mix: #f7f9fc;
+}
+
+/* --- Page Animations --- */
+
+
+body {
+    overflow-x: hidden;
 }
 
 .text-gold {
@@ -124,7 +133,7 @@ html {
 }
 
 .menu-content {
-    background: #ffffff !important;
+    background: var(--bg-grey-mix) !important;
     color: #333 !important;
     padding: 20px !important;
     border-top-left-radius: 40px !important;
@@ -1001,6 +1010,13 @@ footer {
     font-size: 0.95rem !important;
 }
 
+/* --- Menu & Navigation Backgrounds --- */
+.course-tab,
+.login-section {
+    background: #1f2732 !important;
+    min-height: 90vh !important;
+}
+
 /* --- Login Page Styles --- */
 
 .login-section {
@@ -1058,7 +1074,7 @@ footer {
 
 .cart-section {
     min-height: 80vh !important;
-    background: #000 !important;
+    background: #1f2732 !important;
     padding: 80px 0 !important;
 }
 
@@ -1239,7 +1255,7 @@ footer {
 
 
 .cart-section {
-    background: #f8f9fa !important;
+    background: #1f2732 !important;
     padding: 80px 0 !important;
     min-height: 70vh !important;
 }
@@ -1285,7 +1301,7 @@ footer {
 /* --- Search Page Styles --- */
 
 .search-section {
-    background: #f7f9fc !important;
+    background: #1f2732 !important;
     padding: 60px 0 !important;
     min-height: 80vh !important;
 }

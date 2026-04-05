@@ -87,8 +87,10 @@
                     </div>
 
                     <div class="mt-5 d-flex gap-3">
-                        <a href="menu.html" class="btn btn-outline-light rounded-pill px-4 py-3 flex-grow-1">Add More</a>
-                        <button class="btn btn-confirm py-3 px-5 flex-grow-1" onclick="placeOrder()">Secure Checkout</button>
+                        <a href="menu.html" class="btn btn-outline-light rounded-pill px-4 py-3 flex-grow-1">Add
+                            More</a>
+                        <button class="btn btn-confirm py-3 px-5 flex-grow-1" onclick="placeOrder()">Secure
+                            Checkout</button>
                     </div>
                 </div>
 
@@ -102,42 +104,82 @@
         </div>
     </main>
 
-    <footer class="mt-5">
-        <div class="container text-center text-muted py-5">
-            <p class="small mb-0">© 2026 Feane Restaurant. Experience Elegance.</p>
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 footer-brand">
+                    <h2>Feane</h2>
+                    <p>A premium fast-food experience celebrating high-quality ingredients and the art of professional
+                        cooking, located in the heart of Phnom Penh.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 footer-col">
+                    <h5>NAVIGATE</h5>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="menu.html">MENU</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="reservation.html">RESERVE</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 footer-col">
+                    <h5>HOURS</h5>
+                    <p>Tue — Thu: 5:30 PM — 10:00 PM</p>
+                    <p>Fri — Sat: 5:00 PM — 11:00 PM</p>
+                    <p>Sun: 5:00 PM — 9:30 PM</p>
+                    <p>Monday: Closed</p>
+                </div>
+                <div class="col-lg-3 footer-col">
+                    <h5>FIND US</h5>
+                    <p>123 Your Heaart Street</p>
+                    <p>Phnom Penh, Cambodia</p>
+                    <p>+855 773 811</p>
+                    <p>hello@feaneeats.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Feane. All rights reserved.</p>
+            </div>
         </div>
     </footer>
+</body>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-        document.addEventListener('DOMContentLoaded', renderSimpleCart);
+<!-- BOOTSTRAP JAVA -->
+<script src="assets/css/bootstrap/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+    document.addEventListener('DOMContentLoaded', renderSimpleCart);
 
-        function renderSimpleCart() {
-            const cart = JSON.parse(localStorage.getItem('cart')) || [];
-            const listContainer = document.getElementById('cart-items-list');
-            const totalArea = document.getElementById('total-area');
-            const emptyState = document.getElementById('empty-cart');
-            const totalEl = document.getElementById('final-total');
+    function renderSimpleCart() {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const listContainer = document.getElementById('cart-items-list');
+        const totalArea = document.getElementById('total-area');
+        const emptyState = document.getElementById('empty-cart');
+        const totalEl = document.getElementById('final-total');
 
-            if (cart.length === 0) {
-                listContainer.innerHTML = '';
-                totalArea.style.display = 'none';
-                emptyState.style.display = 'block';
-                return;
-            }
+        if (cart.length === 0) {
+            listContainer.innerHTML = '';
+            totalArea.style.display = 'none';
+            emptyState.style.display = 'block';
+            return;
+        }
 
-            emptyState.style.display = 'none';
-            totalArea.style.display = 'block';
+        emptyState.style.display = 'none';
+        totalArea.style.display = 'block';
 
-            let subtotal = 0;
-            let html = '';
+        let subtotal = 0;
+        let html = '';
 
-            cart.forEach(item => {
-                const itemTotal = item.price * (item.quantity || 1);
-                subtotal += itemTotal;
+        cart.forEach(item => {
+            const itemTotal = item.price * (item.quantity || 1);
+            subtotal += itemTotal;
 
-                html += `
+            html += `
                     <div class="cart-item-row" data-aos="fade-up">
                         <img src="${item.image}" alt="${item.name}" class="cart-item-img">
                         <div class="cart-item-info">
@@ -155,47 +197,46 @@
                         </button>
                     </div>
                 `;
-            });
+        });
 
-            listContainer.innerHTML = html;
+        listContainer.innerHTML = html;
 
-            const tax = subtotal * 0.10;
-            const delivery = subtotal > 0 ? 2.50 : 0;
-            const total = subtotal + tax + delivery;
+        const tax = subtotal * 0.10;
+        const delivery = subtotal > 0 ? 2.50 : 0;
+        const total = subtotal + tax + delivery;
 
-            document.getElementById('subtotal-val').innerText = `$${subtotal.toFixed(2)}`;
-            document.getElementById('tax-val').innerText = `$${tax.toFixed(2)}`;
-            document.getElementById('delivery-val').innerText = `$${delivery.toFixed(2)}`;
-            totalEl.innerText = `$${total.toFixed(2)}`;
-        }
+        document.getElementById('subtotal-val').innerText = `$${subtotal.toFixed(2)}`;
+        document.getElementById('tax-val').innerText = `$${tax.toFixed(2)}`;
+        document.getElementById('delivery-val').innerText = `$${delivery.toFixed(2)}`;
+        totalEl.innerText = `$${total.toFixed(2)}`;
+    }
 
-        function updateQty(id, delta) {
-            let cart = JSON.parse(localStorage.getItem('cart')) || [];
-            const item = cart.find(i => String(i.id) === String(id));
-            if (item) {
-                item.quantity = (item.quantity || 1) + delta;
-                if (item.quantity < 1) {
-                    removeItem(id);
-                    return;
-                }
-                localStorage.setItem('cart', JSON.stringify(cart));
-                renderSimpleCart();
+    function updateQty(id, delta) {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const item = cart.find(i => String(i.id) === String(id));
+        if (item) {
+            item.quantity = (item.quantity || 1) + delta;
+            if (item.quantity < 1) {
+                removeItem(id);
+                return;
             }
-        }
-
-        function removeItem(id) {
-            let cart = JSON.parse(localStorage.getItem('cart')) || [];
-            cart = cart.filter(i => String(i.id) !== String(id));
             localStorage.setItem('cart', JSON.stringify(cart));
             renderSimpleCart();
         }
+    }
 
-        function placeOrder() {
-            alert('Thank you for choosing Feane! Your order has been received.');
-            localStorage.removeItem('cart');
-            renderSimpleCart();
-        }
-    </script>
-</body>
+    function removeItem(id) {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cart = cart.filter(i => String(i.id) !== String(id));
+        localStorage.setItem('cart', JSON.stringify(cart));
+        renderSimpleCart();
+    }
+
+    function placeOrder() {
+        alert('Thank you for choosing Feane! Your order has been received.');
+        localStorage.removeItem('cart');
+        renderSimpleCart();
+    }
+</script>
 
 </html>

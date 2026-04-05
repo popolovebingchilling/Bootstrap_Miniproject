@@ -13,7 +13,9 @@
     <!-- FONT AWESOME FOR ICON -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <!-- GOOGLE FONTS -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playwrite+IE:wght@100..400&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playwrite+IE:wght@100..400&display=swap"
+        rel="stylesheet">
     <!-- CUSTOM STYLE -->
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Search | Page</title>
@@ -39,7 +41,8 @@
                 <div class="user_option d-flex align-items-center">
                     <a href="login.html" class="user_link"><i class="fa fa-user"></i></a>
                     <a href="cart.html" class="cart_link mx-4"><i class="fa fa-shopping-cart"></i></a>
-                    <a href="search.html" class="search_link active"><i class="fa fa-search" style="color: var(--gold);"></i></a>
+                    <a href="search.html" class="search_link active"><i class="fa fa-search"
+                            style="color: var(--gold);"></i></a>
                     <a href="menu.html" class="btn btn-order ms-4">Order Online</a>
                 </div>
             </nav>
@@ -55,7 +58,8 @@
                 </div>
 
                 <div class="search-bar-container">
-                    <input type="text" class="search-input-lg" placeholder="Type here to search (e.g. Drinks Burger)...">
+                    <input type="text" class="search-input-lg"
+                        placeholder="Type here to search (e.g. Drinks Burger)...">
                     <i class="fa fa-search search_btn-icon"></i>
                 </div>
 
@@ -81,7 +85,8 @@
                     </div>
                     <div class="search-cat-item" onclick="window.location.href='menu.html?tab=drink'">
                         <div class="search-cat-img">
-                            <img src="https://myincrediblerecipes.com/wp-content/uploads/2023/02/set-2-Lemonade-15-scaled.jpg" alt="Drink">
+                            <img src="https://myincrediblerecipes.com/wp-content/uploads/2023/02/set-2-Lemonade-15-scaled.jpg"
+                                alt="Drink">
                         </div>
                         <span>Drink</span>
                     </div>
@@ -90,12 +95,13 @@
         </section>
     </main>
 
-      <footer>
+    <footer>
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-4 footer-brand">
                     <h2>Feane</h2>
-                    <p>A premium fast-food experience celebrating high-quality ingredients and the art of professional cooking, located in the heart of Phnom Penh.</p>
+                    <p>A premium fast-food experience celebrating high-quality ingredients and the art of professional
+                        cooking, located in the heart of Phnom Penh.</p>
                     <div class="footer-social">
                         <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                         <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -131,35 +137,38 @@
             </div>
         </div>
     </footer>
-
-    <script src="assets/css/bootstrap/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        const searchInput = document.querySelector('.search-input-lg');
-        const searchIcon = document.querySelector('.search_btn-icon'); // Changed selector match style.css
-
-        function performSearch() {
-            const query = searchInput.value.toLowerCase().trim();
-            if (query.includes('pizza')) {
-                window.location.href = 'menu.html?tab=pizza';
-            } else if (query.includes('burger')) {
-                window.location.href = 'menu.html?tab=burger';
-            } else if (query.includes('pasta')) {
-                window.location.href = 'menu.html?tab=pasta';
-            } else if (query.includes('drink')) {
-                window.location.href = 'menu.html?tab=drink';
-            } else if (query !== '') {
-                window.location.href = 'menu.html';
-            }
-        }
-
-        searchInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') performSearch();
-        });
-
-        if (searchIcon) {
-            searchIcon.addEventListener('click', performSearch);
-        }
-    </script>
 </body>
 
+<!-- BOOTSTRAP JAVA -->
+<script src="assets/css/bootstrap/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({ duration: 1000, once: true });
+
+    const searchInput = document.querySelector('.search-input-lg');
+    const searchIcon = document.querySelector('.search_btn-icon');
+
+    function performSearch() {
+        const query = searchInput.value.toLowerCase().trim();
+        if (query.includes('pizza')) {
+            window.location.href = 'menu.html?tab=pizza';
+        } else if (query.includes('burger')) {
+            window.location.href = 'menu.html?tab=burger';
+        } else if (query.includes('pasta')) {
+            window.location.href = 'menu.html?tab=pasta';
+        } else if (query.includes('drink')) {
+            window.location.href = 'menu.html?tab=drink';
+        } else if (query !== '') {
+            window.location.href = 'menu.html';
+        }
+    }
+
+    searchInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') performSearch();
+    });
+
+    if (searchIcon) {
+        searchIcon.addEventListener('click', performSearch);
+    }
+</script>
 </html>
